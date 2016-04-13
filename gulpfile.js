@@ -15,7 +15,8 @@ elixir(function(mix) {
     mix.sass('app.scss')
     	.scripts([
     		'libs/sweetalert-dev.js',
-    		'libs/bootstrap-checkbox.js'
+    		'libs/bootstrap-checkbox.js',
+    		'rsvpFormRepeat.js'
     	], './public/js/libs.js')
     	.styles([
     		'libs/sweetalert.css'

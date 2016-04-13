@@ -24,9 +24,9 @@ class RsvpRequest extends Request
     public function rules()
     {
         return [
-            'first_name1' => 'required',
-            'last_name1' => 'required',
-            'email' => 'required',
+            // 'first_name' => 'required',
+            // 'last_name' => 'required',
+            // 'email' => 'required'
             // 'vote' => 'required|integer'
         ];
     }

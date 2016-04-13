@@ -89,10 +89,10 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <a class="btn btn-link" href="{{ url('/login') }}" style="margin-right: 20px; font-size: 1.2em;">Login</a>
+                                <a class="btn btn-link" href="{{ url('/login') }}" style="margin-right: 20px; font-size: 1.2em;">Back to Login</a>
 
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-user"></i>Register
+                                    <i class="fa fa-btn fa-user"></i>Sign me up!
                                 </button>
                             </div>
                         </div>

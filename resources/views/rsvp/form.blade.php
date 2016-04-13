@@ -1,51 +1,35 @@
 {!! csrf_field() !!}
-
-<div class="form-group">
-    <h4 class="col-md-8 col-md-offset-2">Guest 1</h4><br>
-    <label for="first_name1" class="col-md-3 col-md-offset-1 control-label">First Name *</label>
-    <div class="col-md-6 ">
-        <input type="text" class="form-control" name="first_name1" value="{{ old('first_name1') }}" >
+<div id="testingDiv1" class="clonedInput">
+    <div class="form-group">
+        <h4 id="reference" name="reference" class="heading-reference col-md-8 col-md-offset-2">Guest 1</h4><br>
+        
+        <label for="first_name" class="col-md-3 col-md-offset-1 control-label first_name_label">First Name</label>
+        <div class="col-md-6 ">
+            <input type="text" class="form-control first_name" name="first_name" value="{{ old('first_name') }}" >
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="last_name" class="col-md-3 col-md-offset-1 control-label last_name_label">Last Name</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control last_name" name="last_name" value="{{ old('last_name') }}" >
+        </div>                       
+    </div>
+    <div class="form-group">
+        <label for="email" class="col-md-3 col-md-offset-1 control-label email_label">E-Mail</label>
+        <div class="col-md-6">
+            <input type="email" class="form-control email" name="email" value="{{ old('email') }}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="restrictions" class="col-md-3 col-md-offset-1 control-label restrictions_label">Dietary Restrictions</label>
+        <div class="col-md-6">
+            <textarea type="text" class="form-control restrictions" name="restrictions" value="{{ old('restrictions') }}"></textarea>
+        </div>
     </div>
 </div>
-<div class="form-group">
-    <label for="last_name1" class="col-md-3 col-md-offset-1 control-label">Last Name *</label>
-    <div class="col-md-6">
-        <input type="text" class="form-control" name="last_name1" value="{{ old('last_name1') }}" >
-    </div>                       
-</div>
-<div class="form-group">
-    <label for="email" class="col-md-3 col-md-offset-1 control-label">E-Mail *</label>
-    <div class="col-md-6">
-        <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+<div id="add-del-buttons">
+        <input type="button" id="btnAdd" value="[ + ] RSVP for another member of your party" class="btn btn-primary">
     </div>
-</div>
-<div class="form-group">
-    <label for="restrictions1" class="col-md-3 col-md-offset-1 control-label">Dietary Restrictions</label>
-    <div class="col-md-6">
-        <textarea type="text" class="form-control" name="restrictions1" value="{{ old('restrictions1') }}"></textarea>
-    </div>
-</div>
-
-<div class="form-group">
-    <h4 class="col-md-8 col-md-offset-2">Guest 2</h4><br>
-    <label for="first_name2" class="col-md-3 col-md-offset-1 control-label">First Name</label>
-    <div class="col-md-6">
-        <input type="text" class="form-control" name="first_name2" value="{{ old('first_name2') }}">
-    </div>
-</div>
-<div class="form-group">
-    <label for="last_name2" class="col-md-3 col-md-offset-1 control-label">Last Name</label>
-    <div class="col-md-6">
-        <input type="text" class="form-control" name="last_name2" value="{{ old('last_name2') }}">
-    </div>                       
-</div>
-<div class="form-group">
-    <label for="restrictions2" class="col-md-3 col-md-offset-1 control-label">Dietary Restrictions</label>
-    <div class="col-md-6">
-        <textarea type="text" class="form-control" name="restrictions2" value="{{ old('restrictions2') }}"></textarea>
-    </div>
-</div>  
-
 <div class="form-group padding-top">
     <label for="kids" class="col-md-3 col-md-offset-1 control-label">Kids?</label>
     <div class="col-md-2 col-md-offset-1">    
@@ -76,7 +60,7 @@
 <div class="form-group">
     <div class="col-md-8 col-md-offset-2">
         <button type="submit" class="btn btn-primary">
-            <i class="fa fa-btn fa-sign-in"></i>RSVP
+            <i class="fa fa-btn fa-sign-in"></i>Send RSVP
         </button>
     </div>
 </div>
