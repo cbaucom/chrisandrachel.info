@@ -1635,32 +1635,48 @@ $(function () {
         $('#testingDiv' + num).after(newElem);
 
         // enable the "remove" button
-        $('#btnDel').attr('disabled', false);
+        $('#btnDel').show();
 
         // right now you can only add 5 sections. change '5' below to the max number of times the form can be duplicated
         if (newNum == 5) $('#btnAdd').attr('disabled', true).prop('value', "You've reached the limit");
     });
 
     $('#btnDel').click(function () {
-        // confirmation
-        if (confirm("Are you sure you wish to remove this section of the form? Any information it contains will be lost!")) {
-            var num = $('.clonedInput').length;
-            // how many "duplicatable" input fields we currently have
-            $('#testingDiv' + num).slideUp('slow', function () {
-                $(this).remove();
-                // if only one element remains, disable the "remove" button
-                if (num - 1 === 1) $('#btnDel').attr('disabled', true);
-                // enable the "add" button
-                $('#btnAdd').attr('disabled', false).prop('value', "[ + ] add to this form");
+
+        swal({   
+            title: "Are you sure?",   
+            text: "Your information will be lost!",   
+            type: "warning",
+            allowOutsideClick: true,   
+            showCancelButton: true,  
+            confirmButtonColor: "#DD6B55",   
+            confirmButtonText: "Yes, delete it!",   
+            cancelButtonText: "No, keep it!",   
+            timer: 2000,
+            closeOnConfirm: true,   
+            closeOnCancel: true },
+            function(isConfirm){   
+                if (isConfirm) {     
+                    var num = $('.clonedInput').length;
+                    // how many "duplicatable" input fields we currently have
+                    $('#testingDiv' + num).slideUp('slow', function () {
+                        $(this).remove();
+                        // if only one element remains, disable the "remove" button
+                        if (num - 1 === 1) $('#btnDel').hide();
+                        // enable the "add" button
+                        $('#btnAdd').attr('disabled', false).prop('value', "[ + ] RSVP for another member of your party");
+                    });
+                    swal("Deleted!", "Your imaginary file has been deleted.", "success");   
+                } else {     
+                    swal("Cancelled", "Your imaginary file is safe :)", "error"); 
+                    return false;
+                }
             });
-        }
-        return false;
-        // remove the last element
 
         // enable the "add" button
         $('#btnAdd').attr('disabled', false);
     });
 
-    $('#btnDel').attr('disabled', true);
+    $('#btnDel').hide();
 });
 //# sourceMappingURL=libs.js.map
