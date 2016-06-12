@@ -51,7 +51,6 @@ $(function () {
             confirmButtonColor: "#DD6B55",   
             confirmButtonText: "Yes, delete it!",   
             cancelButtonText: "No, keep it!",   
-            timer: 2000,
             closeOnConfirm: true,   
             closeOnCancel: true },
             function(isConfirm){   
@@ -65,9 +64,9 @@ $(function () {
                         // enable the "add" button
                         $('#btnAdd').attr('disabled', false).prop('value', "[ + ] RSVP for another member of your party");
                     });
-                    swal("Deleted!", "Your imaginary file has been deleted.", "success");   
+                    swal("Deleted!", "The section has been deleted.", "success");   
                 } else {     
-                    swal("Cancelled", "Your imaginary file is safe :)", "error"); 
+                    swal("Cancelled", "Your information is safe :)", "error"); 
                     return false;
                 }
             });
@@ -77,4 +76,16 @@ $(function () {
     });
 
     $('#btnDel').hide();
+
+    // RSVP Active class toggle
+    $('.btn-toggle').click(function() {
+        $(this).find('.btn').toggleClass('active');  
+        
+        if ($(this).find('.btn-primary').size()>0) {
+            $(this).find('.btn').toggleClass('btn-primary');
+        }
+        
+        $(this).find('.btn').toggleClass('btn-default');
+           
+    });
 });

@@ -10,16 +10,31 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+	Route::get('/', function () {
+	    return view('welcome');
+	});
 
-Route::get('/', function () {
-    return view('welcome');
-});
+	Route::auth();
 
-Route::auth();
-Route::get('test', 'HomeController@test');
-Route::get('details', 'HomeController@details');
-Route::get('photos', 'HomeController@photos');
-Route::get('registry', 'HomeController@registry');
-Route::resource('rsvp', 'RsvpController');
+	Route::get('/photos', 'HomeController@index');
+	Route::get('/#rsvp', 'RsvpController@create');
+// Route::group(['middleware' => 'web'], function() {
+	Route::post('/', 'RsvpController@store');
+	Route::post('/photos', 'RsvpController@store');
+	
+	Route::get('sendemail', function () {
+		 $data = array(
+		     'name' => "Chris and Rachel",
+		 );
 
-Route::get('list', 'RsvpController@show');
+		 Mail::send('emails.yes', $data, function ($message) {
+
+		     $message->from('chrisrb83@gmail.com', 'Chris and Rachel');
+
+		     $message->to('chrisrb83@gmail.com')->subject('Thank you!');
+
+		 });
+
+		 return view('welcome');
+	});
+// });

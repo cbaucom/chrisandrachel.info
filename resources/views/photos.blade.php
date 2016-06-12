@@ -1,33 +1,37 @@
 @extends('layouts.app')
+@section('nav-brand')
+    <h5 class="brand"><a class="navbar-brand" href="{{ url('/#december-9-2016') }}">
+        Chris &amp; Rachel
+    </a></h5>           
+@stop
 @section('nav-links')
-<ul class="nav navbar-nav">
-    <li class="dropdown"><a href="{{ url('/') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Wedding</a>
-        <ul class="dropdown-menu">
-            <a href="./#ourstory">Our Story</a>
-            <a href="./#ourwedding">Our Wedding</a>
-            <a href="./#weddingparty">Wedding Party</a>
-        </ul>
-    </li>
-    <li class="dropdown"><a href="{{ url('/details') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Details</a>
-        <ul class="dropdown-menu">
-            <a href="details#accommodations">Accommodations</a>
-            <a href="details#travel">Travel</a>
-            <a href="details#todo">Things To Do</a>
-        </ul>
-    </li>
-    <li class="active"><a href="{{ url('/photos') }}">Photos</a></li>
-    <li><a href="{{ url('/registry') }}">Registry</a></li>
-    <li><a href="{{ url('/rsvp') }}">RSVP</a></li>
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="{{ url('/#story') }}">Our Story</a></li>
+    <li class="devider-ulem show_1"></li> 
+    <li><a href="{{ url('/#wedding') }}">Wedding Day</a></li>
+    <li class="devider-ulem show_1"></li> 
+    <li><a href="{{ url('/#travel') }}">Travel</a></li>
+    <li class="devider-ulem show_1"></li> 
+    <li><a href="{{ url('/#events') }}">Saturday Events</a></li>
+    <li class="devider-ulem show_1"></li> 
+    <li><a class="active" href="{{ url('/photos') }}">Photos</a></li>
+    <li class="devider-ulem show_1"></li> 
+    <li><a href="{{ url('/#registry') }}">Registry</a></li>
+    <li class="devider-ulem show_1"></li> 
+    <li><a href="{{ url('/#rsvp') }}" data-toggle="modal" data-target="#rsvpModal">RSVP</a></li>
 </ul>
-@endsection
+@stop
 @section('content')
-<div class="container">
+<div class="">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="main-image">
-                <img src="images/image_roll_1600x9000.jpg" class="img-responsive center-block">
-            </div>
+        <div class="col-md-12">
+            <img src="images/image_roll_1600x9000.jpg" class="img-responsive">
         </div>
     </div>
 </div>
+@if (!empty($success))
+      {!! flash()->success('Success!', 'RSVP successfully created!'); !!}
+@endif
+@include('rsvp.modal')
+
 @endsection

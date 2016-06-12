@@ -1,0 +1,19 @@
+.bieber {
+	background-image: url("../images/bieber.jpg");
+	position: relative;
+	min-height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: 1;
+}
+
+.bieber .sorry {
+	margin: 80px 20px; 
+	width: 300px;
+}
+
+.bieber .sorry h5 {
+	background-color: #eee;
+  	opacity: 0.5;
+}

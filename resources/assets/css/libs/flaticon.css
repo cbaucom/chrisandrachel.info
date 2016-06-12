@@ -1,0 +1,108 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("../fonts/flaticon.eot");
+	src: url("../fonts/flaticon.eot#iefix") format("embedded-opentype"),
+	url("../fonts/flaticon.woff") format("woff"),
+	url("../fonts/flaticon.ttf") format("truetype"),
+	url("../fonts/flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+font-style: normal;
+
+}.flaticon-balloon11:before {
+	content: "\e000";
+}
+.flaticon-bouquet1:before {
+	content: "\e001";
+}
+.flaticon-bow9:before {
+	content: "\e002";
+}
+.flaticon-bunch1:before {
+	content: "\e003";
+}
+.flaticon-caffeine1:before {
+	content: "\e004";
+}
+.flaticon-cake20:before {
+	content: "\e005";
+}
+.flaticon-cakes1:before {
+	content: "\e006";
+}
+.flaticon-camera97:before {
+	content: "\e007";
+}
+.flaticon-champagne7:before {
+	content: "\e008";
+}
+.flaticon-chicken18:before {
+	content: "\e009";
+}
+.flaticon-chicken19:before {
+	content: "\e00a";
+}
+.flaticon-engagement2:before {
+	content: "\e00b";
+}
+.flaticon-flowers14:before {
+	content: "\e00c";
+}
+.flaticon-flowers20:before {
+	content: "\e00d";
+}
+.flaticon-gift69:before {
+	content: "\e00e";
+}
+.flaticon-graffiti:before {
+	content: "\e00f";
+}
+.flaticon-heart292:before {
+	content: "\e010";
+}
+.flaticon-heart310:before {
+	content: "\e011";
+}
+.flaticon-heart312:before {
+	content: "\e012";
+}
+.flaticon-hearts10:before {
+	content: "\e013";
+}
+.flaticon-marriage:before {
+	content: "\e014";
+}
+.flaticon-photo229:before {
+	content: "\e015";
+}
+.flaticon-ring32:before {
+	content: "\e016";
+}
+.flaticon-ring34:before {
+	content: "\e017";
+}
+.flaticon-rings4:before {
+	content: "\e018";
+}
+.flaticon-wedding:before {
+	content: "\e019";
+}
+.flaticon-wedding10:before {
+	content: "\e01a";
+}
+.flaticon-wedding11:before {
+	content: "\e01b";
+}
+.flaticon-wedding15:before {
+	content: "\e01c";
+}
+.flaticon-wedding6:before {
+	content: "\e01d";
+}
+.flaticon-wedding9:before {
+	content: "\e01e";
+}

@@ -1,28 +1,7 @@
 @extends('layouts.app')
-@section('nav-links')
-<ul class="nav navbar-nav">
-    <li class="dropdown"><a href="{{ url('/') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Wedding</a>
-        <ul class="dropdown-menu">
-            <a href="#ourstory">Our Story</a>
-            <a href="#ourwedding">Our Wedding</a>
-            <a href="#otherevents">Other Events</a>
-            <a href="#weddingparty">Wedding Party</a>
-        </ul>
-    </li>
-    <li class="dropdown"><a href="{{ url('/details') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Details</a>
-        <ul class="dropdown-menu">
-            <a href="details#accommodations">Accommodations</a>
-            <a href="details#travel">Travel</a>
-            <a href="details#todo">Things To Do</a>
-        </ul>
-    </li>
-    <li><a href="{{ url('/photos') }}">Photos</a></li>
-    <li><a href="{{ url('/registry') }}">Registry</a></li>
-    <li><a href="{{ url('/rsvp') }}">RSVP</a></li>
-</ul>
-@endsection
+
 @section('content')
-<div class="container register">
+<div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -89,10 +68,8 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <a class="btn btn-link" href="{{ url('/login') }}" style="margin-right: 20px; font-size: 1.2em;">Back to Login</a>
-
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-user"></i>Sign me up!
+                                    <i class="fa fa-btn fa-user"></i>Register
                                 </button>
                             </div>
                         </div>

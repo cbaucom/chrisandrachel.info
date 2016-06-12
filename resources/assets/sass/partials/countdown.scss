@@ -1,0 +1,33 @@
+@media(max-width:767px) {
+    .countdown>div>span.count {
+        width: 60px;
+        height: 60px;
+        display: block;
+        border: 1px solid #eee;
+        line-height: 60px;
+        border-radius: 50%;
+        background: #7fbb00;
+        margin: 0 auto;
+    }
+    span.count {
+        font-size: 2em;
+        color: #fff;
+        font-weight: 700;
+    }
+    span.title {
+        color: #fff;
+        position: relative;
+        margin: 10px 0 40px 0;
+        font-size: 12px;
+    }
+}
+
+#countdown p {
+  display: inline-block;
+  padding: 5px;
+  margin: 0 0 20px;
+  color: rgba(105, 200, 194, 0.9);  
+}
+#countdown p.timeRefDays {
+    margin-left: -5px;
+}

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Requests;
-
+use App\Rsvp;
 use App\Http\Requests\Request;
 
 class RsvpRequest extends Request
@@ -13,6 +13,10 @@ class RsvpRequest extends Request
      */
     public function authorize()
     {
+        // $user    = app( 'auth' )->user();
+        // $rsvp = Rsvp::findOrFail( $this->rsvps );
+
+        // return $rsvp->user_id === $user->id;
         return true;
     }
 
@@ -24,10 +28,16 @@ class RsvpRequest extends Request
     public function rules()
     {
         return [
-            // 'first_name' => 'required',
-            // 'last_name' => 'required',
-            // 'email' => 'required'
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'email|unique:rsvps,email'
             // 'vote' => 'required|integer'
         ];
+    }
+
+    // override this to redirect back
+    public function forbiddenResponse()
+    {
+        return redirect()->back()->withInput()->withErrors('forbidden');
     }
 }
