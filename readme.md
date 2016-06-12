@@ -25,4 +25,25 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
 # chrisandrachel.info
+
+# Get the project
+git clone https://github.com/cbaucom/chrisandrachel.info.git
+
+# Change directory
+cd chrisandrachel.info
+
+# Rename env.example to .env and fill in all the keys and secrets and also generate a secure key for the app using `php artisan key:generate`
+
+# Install Composer dependencies
+composer install
+
+# Install NPM dependencies
+npm install
+
+# Run your migrations
+php artisan migrate
+
+# Serve the application
+php artisan serve
